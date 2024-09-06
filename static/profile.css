@@ -1,0 +1,115 @@
+.logout {
+    background-color: lightblue;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-left: 87%;
+    height: 10px;
+    padding: 8px 16px;
+}
+
+body {
+    height: 3000px;
+    background: linear-gradient(400deg, #007BB8 0%, #00AFF0 70%, #CDF6FF 80%, white 90%);
+}
+
+.bio {
+    height: 100px;
+    width: 300px;
+}
+
+.container {
+    width: 45%;
+    margin: 2%;
+    float: left;
+}
+
+#bio {
+    border: black;
+    text-align: center;
+    padding: 5px;
+    background-color: #C5C5C5;  
+    height: 200px;
+    border-radius: 10px;
+}
+
+#info {
+    text-align: center;
+    padding: 5px;
+    background-color: #C5C5C5;  
+    height: 300px;
+    border-radius: 10px; 
+}
+
+.submit {
+    margin: 5%;
+}
+
+.btn {
+    background-color: #007BB8;
+    color: #fff;
+    width: 150px;
+    height: 50px;
+
+}
+
+.previous {
+    background-color: #f1f1f1;
+    color: black;
+    border-radius: 20%;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+}
+
+h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+.profilePage {
+    text-align: center;
+    background-color: #525252;
+    height: 550px;
+    border-radius: 25px;
+}
+
+input {
+    border-radius: 10px;
+}
+
+img {
+    padding: 2em;
+    align-content: center;
+}
+
+.edit {
+    margin: auto;
+    width: 15%;
+}
+
+.editHighlights {
+    background-color: #DE3163;
+    /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+
+}
+
+.editHighlights:active {
+    background-color: #800020;
+}
+
+.editHighlights:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
