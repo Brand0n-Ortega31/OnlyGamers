@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/dashboard.css" />
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <header>
+        <h3>Hello {{user.username}}</h3>
+
+        <div class="searchBox">
+
+            <input class="searchInput" type="text" name="" placeholder="Search">
+            <button class="searchButton" href="#">
+                <i class="material-icons">
+                    search
+                </i>
+            </button>
+        </div>
+
+        <div class="icon">
+            <img src="https://cdn.discordapp.com/attachments/1041461820973658202/1052537556681629696/Copy_of_Gamers.png"
+                alt="">
+        </div>
+
+
+    </header>
+
+
+    <br>
+    <div class="container">
+        <h2>My Posts</h2>
+    </div>
+    <br>
+
+
+
+
+    <div class="main-container">
+        <div class="video-container-up">
+            <a href="{{url_for('upload')}}" class="button">Upload a Video</a>
+        </div>
+
+        <div class="video-container-up">
+            <a href="{{url_for('profile')}}" class="button">Profile Page</a>
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div></div>
+
+
+
+
+
+    {% set names = ["Rodrigo","Jatnael","Brandon","Tristin","Axel","Leo"] %}
+
+    {% set professions = ["Valorant","Minecraft","APEX","OW2","Fortnite","Call of Duty"] %}
+
+    {% set videos = ["https://www.youtube.com/embed/dQw4w9WgXcQ", "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "https://www.youtube.com/embed/dQw4w9WgXcQ", "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "https://www.youtube.com/embed/dQw4w9WgXcQ","https://www.youtube.com/embed/dQw4w9WgXcQ"] %}
+
+
+    {% set gamer = ["Rodlowkey","Jett","Palomitas","Thant","Hermana","Namor"] %}
+
+
+    <!-- create a loop to generate the cards -->
+
+    <div class="flex-container">
+
+
+
+        {% for i in finalvideo_list %}
+
+        <div class="flex-item-left">
+            <div class="card">
+                <br>
+                <h2><b>{{ (username_list[loop.index -1 ]) }}</b></h2>
+                <iframe width="560" height="315" src="{{i}}" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <div class="container">
+                    <button class="button">Valorant</button>
+                    <p>GamerTag: Hidden</p>
+                </div>
+            </div>
+        </div>
+
+
+        {% endfor %}
+
+    </div>
+    <br>
+    <a href="{{url_for('logout')}}" class="button">Press here to logout</a>
+
+</body>
+
+</html>

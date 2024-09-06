@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/profile.css">
+    <title>Dashboard</title>
+</head>
+
+<header>
+    <a href="{{url_for('dashboard')}}" class="previous">&#8249;</a>
+    <a href="{{url_for('logout')}}" class="logout">Logout &raquo;</a>
+    <div class="user">
+        <h1>{{user.username}}</h1>
+    </div>
+    
+</header>
+
+<body>
+
+
+    <form method="POST">
+
+        <div id="bio" class="container">
+            <h3>BIO</h3><input type="text" class="bio" id="txtField" name="bio" value="{{ profile.bio }}" required>
+        </div>
+
+        <div id="info" class="container">
+            <h3>Email</h3>
+            <input type="text" class="email" id="txtField" name="email" value="{{ profile.email }}" required>
+
+            <h3>Phone Number</h3>
+            <input type="text" class="number" id="txtField" name="number" value="{{ profile.phone_number }}" required>
+
+            <h3>Gamer Tag</h3>
+            <input type="text" class="tag" id="txtField" name="tag" value="{{ profile.gamer_tag }}" required>
+        </div>
+        <div class="submit">
+            <input class="btn" type="submit" value="Confirm Changes">
+        </div>
+    </form>
+
+    
+
+</body>
+
+</html>
